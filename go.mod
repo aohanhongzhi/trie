@@ -1,3 +1,3 @@
-module github.com/yihleego/trie
+module github.com/aohanhongzhi/trie
 
 go 1.18

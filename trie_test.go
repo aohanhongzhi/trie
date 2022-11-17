@@ -236,3 +236,11 @@ func EqualToken(t *testing.T, token *Token, begin int, end int, kw string) {
 		EqualEmit(t, token.Emit, begin, end, kw)
 	}
 }
+
+func TestName(t *testing.T) {
+	text := "这个退回来了吗"
+	trie := New("这个退回了", "这个退回", "退回", "退回来了吗", "回来了吗", "回来")
+	trie.AddKeywords("吗")
+	emits := trie.FindAll(text, false)
+	t.Log(emits)
+}
